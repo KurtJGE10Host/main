@@ -1,0 +1,295 @@
+body { /* main */
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  margin: 0;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
+
+h2.navbar { /* navbar */
+  display: flex;
+  justify-content: space-between; /* puts space between words */
+  align-items: center;
+  color: white;
+  background-color: #1A1A19;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 10px;
+  width: 100%;
+}
+
+.full-width-image {
+  width: 100%; /* Make the image span the entire screen width */
+  height: auto; /* Maintain the image's aspect ratio */
+  display: block; /* Prevent any unwanted inline spacing */
+}
+
+.menu {
+  position: relative;
+}
+
+.menu-link {
+  cursor: pointer;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.menu-link:hover {
+  background-color: red;
+}
+
+.dropdown {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: medium;
+  font-style: normal;
+  display: none; /* Initially hidden */
+  position: absolute;
+  right: 0; /* Align to the right */
+  top: 100%; /* Position below the "Menu" */
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+  z-index: 10;
+  min-width: 150px; /* Adjust as needed */
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown a:hover {
+  background-color: #f0f0f0; /* Highlight effect */
+}
+
+.menu:hover .dropdown {
+  display: block; /* Show dropdown on hover */
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+/* Box styling */
+.box {
+  display: flex;
+  flex-direction: column; /* Align image and text vertically */
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 720px;
+  text-decoration: none; /* Remove underline */
+  color: black;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  background-color: #f9f9f9;
+  overflow: hidden; /* Ensure content stays within the box */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Image styling */
+.box img {
+  width: 100%; /* Adjust to box width */
+  height: 92%; /* Use most of the box for the image */
+  object-fit: cover; /* Ensure image fits well */
+}
+
+/* Text styling */
+.box span {
+  padding: 10px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: medium;
+  font-style: normal;
+}
+
+/* Hover effect */
+.box:hover {
+  transform: scale(1.1); /* Enlarge the box */
+  background-color: #e0e0e0;
+}
+
+/* Optional: Highlight text color on hover */
+.box:hover span {
+  color: #333;
+}
+
+.collapsible-container {
+  margin: 20px auto;
+  width: 90%;
+}
+
+.collapsible {
+  border: 1px solid black;
+  margin-bottom: 5px; /* Reduced margin between entries */
+  overflow: hidden;
+  transition: margin 0.3s ease; /* Smoothly adjust spacing on expansion */
+}
+
+.header {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: medium;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  padding: 30px;
+  text-align: left;
+}
+
+.content {
+  max-height: 0; /* Hidden content height */
+  overflow: hidden;
+  padding: 0 10px; /* Add padding for better layout */
+  background-color: #fff;
+  transition: max-height 0.5s ease, padding 0.5s ease; /* Smooth height transition */
+}
+
+.content img {
+  width: 30%;
+  margin: 5px;
+}
+
+.content p {
+  margin: 5px 0;
+}
+
+
+/* Footer styling */
+.footer {
+  bottom: 0px;
+  width: 100%; /* Spans the entire screen width */
+  background-color: #1A1A19; /* Dark background for contrast */
+  color: white; /* White text for readability */
+  text-align: center; /* Center-align the text */
+  padding: 10px 0; /* Add vertical padding */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* Fonts 
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+*/
